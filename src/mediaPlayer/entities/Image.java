@@ -13,7 +13,7 @@ public class Image extends MultimediaElement {
         this.brightness = brightnessInput;
     }
 
-    // metodi
+    // METODI
 
 
     public int getBrightness() {
@@ -21,7 +21,7 @@ public class Image extends MultimediaElement {
     }
 
 
-    // override
+    // override per sout
 
     @Override
     public String toString() {

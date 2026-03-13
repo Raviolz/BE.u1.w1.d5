@@ -1,21 +1,25 @@
 package mediaPlayer.entities;
 
-public class Video extends MultimediaElement {
+import mediaPlayer.interfaces.Playable;
+
+public class Video extends MultimediaElement implements Playable {
 
     //lista attributi
 
+    private int duration;
     private int volume;
     private int brightness;
 
     // costruttori
 
-    public Video(String titleInput, int volumeInput, int brightnessInput) {
+    public Video(String titleInput, int durationInput, int volumeInput, int brightnessInput) {
         super(titleInput);
+        this.duration = durationInput;
         this.volume = volumeInput;
         this.brightness = brightnessInput;
     }
 
-    // metodi
+    // METODI
 
 
     public int getVolume() {
@@ -26,10 +30,22 @@ public class Video extends MultimediaElement {
         return brightness;
     }
 
-    //override
+    public int getDuration() {
+        return duration;
+    }
+
+    //override per sout
 
     @Override
     public String toString() {
-        return super.toString() + " Volume: " + volume + " Brightness: " + brightness;
+        return super.toString() + " Volume: " + volume + " Brightness: " + brightness + "Duration:" + duration;
+    }
+
+
+    // ovverride per interfaccia playable
+
+    @Override
+    public void play() {
+        System.out.println("I'm playing video: " + getTitle());
     }
 }

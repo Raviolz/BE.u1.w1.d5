@@ -11,8 +11,8 @@ public class Main {
 
         // test creazione e visualizzazione
 
-        Audio a1 = new Audio("Rebellion (lies) ", 93);
-        Video v1 = new Video("Thailand-2025", 28, 89);
+        Audio a1 = new Audio("Rebellion (lies) ", 5, 98);
+        Video v1 = new Video("Thailand-2025", 12, 23, 89);
         Image i1 = new Image("Grigio con zampe incrociate ", 91);
 
         System.out.println(a1);
@@ -28,7 +28,16 @@ public class Main {
         System.out.println("Inserisci volume a cui riprodurlo:");
         int volume = Integer.parseInt(scanner.nextLine());
 
-        Audio a2 = new Audio(title, volume);
+        System.out.println("Inserisci la sua lunghezza:");
+        int duration = Integer.parseInt(scanner.nextLine());
+
+        Audio a2 = new Audio(title, volume, duration);
         System.out.println(a2);
+
+
+        // test per interfaccia playable
+
+        a2.play();
+        v1.play();
     }
 }
