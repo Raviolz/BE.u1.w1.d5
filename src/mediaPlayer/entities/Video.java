@@ -55,6 +55,10 @@ public class Video extends MultimediaElement implements Playable, HasVolume, Has
             for (int j = 0; j < volume; j++) {
                 System.out.print("!");
             }
+
+            for (int x = 0; x < brightness; x++) {
+                System.out.print("*");
+            }
             // nota per me: solo print non va a capo
             System.out.println();  // aggiunta per estetica per gestire ordine e a capo
         }

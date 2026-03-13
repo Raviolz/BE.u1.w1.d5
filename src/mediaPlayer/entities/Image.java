@@ -22,6 +22,14 @@ public class Image extends MultimediaElement implements HasBrightness {
         return brightness;
     }
 
+    public void show() {
+        System.out.print(getTitle());
+        for (int i = 0; i < brightness; i++) {
+            System.out.print("*");
+        }
+
+    }
+
 
     // override per sout
 

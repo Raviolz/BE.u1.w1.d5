@@ -10,8 +10,8 @@ public class Main {
         // test creazione e visualizzazione
 
         Audio a1 = new Audio("Rebellion (lies) ", 5, 8);
-        Video v1 = new Video("Thailand-2025", 7, 6, 18);
-        Image i1 = new Image("Grigio con zampe incrociate ", 91);
+        Video v1 = new Video("Thailand-2025", 7, 6, 5);
+        Image i1 = new Image("Grigio con zampe incrociate ", 8);
 
         System.out.println(a1);
         System.out.println(v1);
@@ -59,17 +59,27 @@ public class Main {
 
         // test per incr/decr Brightness
         System.out.println(i1);
-        i1.decreaseBrightness(10);
+        i1.decreaseBrightness(3);
         System.out.println(i1);
         i1.increaseBrightness(2);
         System.out.println(i1);
 
         System.out.println(v1);
-        v1.decreaseBrightness(8);
+        v1.decreaseBrightness(2);
         System.out.println(v1);
-        v1.increaseBrightness(1);
+        v1.increaseBrightness(4);
         System.out.println(v1);
 
+
+        // test play() post incr/decr Brightness
+
+        v1.play();
+
+
+        // test per show()
+        
+        System.out.println(i1);
+        i1.show();
     }
 
 
