@@ -27,6 +27,7 @@ public class Image extends MultimediaElement implements HasBrightness {
         for (int i = 0; i < brightness; i++) {
             System.out.print("*");
         }
+        System.out.println();
 
     }
 
