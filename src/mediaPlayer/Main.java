@@ -128,6 +128,8 @@ public class Main {
                     Image imageElement = (Image) selected;
                     imageElement.show();
                 }
+            } else if (chosenNumber != 0) {
+                System.out.println("Numero non valido!");
 
             }
 
@@ -151,7 +153,7 @@ public class Main {
 
             int choice = Integer.parseInt(scanner.nextLine());
 
-            // title comune a tutti
+            // title comune a tutti  
 
             System.out.println("Inserisci il titolo:");
             String title = scanner.nextLine();
@@ -217,8 +219,11 @@ public class Main {
                     Image imageElementD = (Image) selected;
                     imageElementD.show();
                 }
+            } else if (chosenNumberD != 0) {
+                System.out.println("Numero non valido!");
 
             }
+
 
         } while (chosenNumberD != 0);
 
