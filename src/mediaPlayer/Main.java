@@ -9,8 +9,8 @@ public class Main {
 
         // test creazione e visualizzazione
 
-        Audio a1 = new Audio("Rebellion (lies) ", 5, 98);
-        Video v1 = new Video("Thailand-2025", 12, 23, 89);
+        Audio a1 = new Audio("Rebellion (lies) ", 5, 8);
+        Video v1 = new Video("Thailand-2025", 7, 6, 18);
         Image i1 = new Image("Grigio con zampe incrociate ", 91);
 
         System.out.println(a1);
@@ -41,14 +41,21 @@ public class Main {
 
         // test per incr/decr Volume
 
-        v1.decreaseVolume(2);
+        v1.decreaseVolume(5);
         System.out.println(v1);
-        v1.increaseVolume(5);
+        v1.increaseVolume(1);
         System.out.println(v1);
 
-        a1.decreaseVolume(10);
+        a1.decreaseVolume(6);
         System.out.println(a1);
-        a1.increaseVolume(5);
+        a1.increaseVolume(1);
         System.out.println(a1);
+
+        // test play() post incr/decr Volume
+
+        v1.play();
+        a1.play();
     }
+
+
 }

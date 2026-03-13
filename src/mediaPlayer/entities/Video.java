@@ -47,8 +47,16 @@ public class Video extends MultimediaElement implements Playable, HasVolume {
 
     @Override
     public void play() {
-        System.out.println("I'm playing video: " + getTitle());
+        for (int i = 0; i < duration; i++) {
 
+            System.out.print(getTitle());
+
+            for (int j = 0; j < volume; j++) {
+                System.out.print("!");
+            }
+            // nota per me: solo print non va a capo
+            System.out.println();  // aggiunta per estetica per gestire ordine e a capo
+        }
     }
 
     // override per interfaccia HasVolume
