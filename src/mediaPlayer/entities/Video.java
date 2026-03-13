@@ -1,9 +1,10 @@
 package mediaPlayer.entities;
 
+import mediaPlayer.interfaces.HasBrightness;
 import mediaPlayer.interfaces.HasVolume;
 import mediaPlayer.interfaces.Playable;
 
-public class Video extends MultimediaElement implements Playable, HasVolume {
+public class Video extends MultimediaElement implements Playable, HasVolume, HasBrightness {
 
     //lista attributi
 
@@ -70,4 +71,17 @@ public class Video extends MultimediaElement implements Playable, HasVolume {
     public void decreaseVolume(int howMuchInput) {
         this.volume -= howMuchInput;
     }
+
+    // override per HASBRIGHTNESS
+
+    @Override
+    public void increaseBrightness(int howMuch) {
+        this.brightness += howMuch;
+    }
+
+    @Override
+    public void decreaseBrightness(int howMuch) {
+        this.brightness -= howMuch;
+    }
 }
+

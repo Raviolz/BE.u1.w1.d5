@@ -1,6 +1,8 @@
 package mediaPlayer.entities;
 
-public class Image extends MultimediaElement {
+import mediaPlayer.interfaces.HasBrightness;
+
+public class Image extends MultimediaElement implements HasBrightness {
 
     // lista attributi
 
@@ -27,4 +29,17 @@ public class Image extends MultimediaElement {
     public String toString() {
         return super.toString() + " Brightness: " + brightness;
     }
+
+    // override per HASBRIGHTNESS
+
+    @Override
+    public void increaseBrightness(int howMuch) {
+        this.brightness += howMuch;
+    }
+
+    @Override
+    public void decreaseBrightness(int howMuch) {
+        this.brightness -= howMuch;
+    }
 }
+

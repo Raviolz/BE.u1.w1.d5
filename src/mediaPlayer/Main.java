@@ -55,6 +55,21 @@ public class Main {
 
         v1.play();
         a1.play();
+
+
+        // test per incr/decr Brightness
+        System.out.println(i1);
+        i1.decreaseBrightness(10);
+        System.out.println(i1);
+        i1.increaseBrightness(2);
+        System.out.println(i1);
+
+        System.out.println(v1);
+        v1.decreaseBrightness(8);
+        System.out.println(v1);
+        v1.increaseBrightness(1);
+        System.out.println(v1);
+
     }
 
 
