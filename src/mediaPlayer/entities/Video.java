@@ -1,8 +1,9 @@
 package mediaPlayer.entities;
 
+import mediaPlayer.interfaces.HasVolume;
 import mediaPlayer.interfaces.Playable;
 
-public class Video extends MultimediaElement implements Playable {
+public class Video extends MultimediaElement implements Playable, HasVolume {
 
     //lista attributi
 
@@ -38,7 +39,7 @@ public class Video extends MultimediaElement implements Playable {
 
     @Override
     public String toString() {
-        return super.toString() + " Volume: " + volume + " Brightness: " + brightness + "Duration:" + duration;
+        return super.toString() + " Volume: " + volume + " Brightness: " + brightness + " Duration:" + duration;
     }
 
 
@@ -47,5 +48,18 @@ public class Video extends MultimediaElement implements Playable {
     @Override
     public void play() {
         System.out.println("I'm playing video: " + getTitle());
+
+    }
+
+    // override per interfaccia HasVolume
+
+    @Override
+    public void increaseVolume(int howMuchInput) {
+        this.volume += howMuchInput;
+    }
+
+    @Override
+    public void decreaseVolume(int howMuchInput) {
+        this.volume -= howMuchInput;
     }
 }

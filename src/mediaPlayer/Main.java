@@ -4,8 +4,6 @@ import mediaPlayer.entities.Audio;
 import mediaPlayer.entities.Image;
 import mediaPlayer.entities.Video;
 
-import java.util.Scanner;
-
 public class Main {
     static void main(String[] args) {
 
@@ -20,7 +18,7 @@ public class Main {
         System.out.println(i1);
 
         // test creazione con scanner
-
+/*
         Scanner scanner = new Scanner(System.in);
         System.out.println("Inserisci il titolo del brano:");
         String title = scanner.nextLine();
@@ -33,11 +31,24 @@ public class Main {
 
         Audio a2 = new Audio(title, volume, duration);
         System.out.println(a2);
-
+*/
 
         // test per interfaccia playable
 
-        a2.play();
+        //  a2.play();
         v1.play();
+        a1.play();
+
+        // test per incr/decr Volume
+
+        v1.decreaseVolume(2);
+        System.out.println(v1);
+        v1.increaseVolume(5);
+        System.out.println(v1);
+
+        a1.decreaseVolume(10);
+        System.out.println(a1);
+        a1.increaseVolume(5);
+        System.out.println(a1);
     }
 }
